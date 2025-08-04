@@ -1,13 +1,13 @@
 import fs from "node:fs/promises"
 import path from "node:path"
-import sendResponse from "./sendResponse.js";
 
-export default async function sendJsonData(res,dirname){
-    const sourceFile=path.join(dirname,'data.json')
-    const reqFile= await fs.readFile(sourceFile);
+export default async function sendJsonData(){
+    const sourceFile=path.join('data','data.json')
     try{
-         await sendResponse(res,200,'application/json',reqFile)
+        const reqFile= await fs.readFile(sourceFile);
+        return JSON.parse(reqFile)
     }catch(err){
         console.log(err);
+        return ;
     }
 }
