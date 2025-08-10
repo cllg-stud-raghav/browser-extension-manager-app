@@ -10,9 +10,13 @@ const renderActive = document.getElementsByClassName('nav-item')[1]
 const renderInActive = document.getElementsByClassName('nav-item')[2]
 const removeBtnList = document.querySelectorAll('.remove');
 const ActiveBtnList = document.querySelectorAll('.ActiveBtn');
+const themeToggle=document.querySelector('.theme-toggle');
+const body=document.body;
 // console.log(removeBtn)
+
 let isActive = false;
 let isInActive = false;
+let isLight=true;
 
 
 //Event Handlers
@@ -86,4 +90,7 @@ ActiveBtnList.forEach((item)=>{
     item.addEventListener("click",()=>{
         
     })
+})
+themeToggle.addEventListener('click',()=>{
+    body.classList.toggle('dark')
 })
