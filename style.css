@@ -100,8 +100,6 @@ nav ul {
 .cards-container{
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 0;
-  flex-basis: 0;
   gap:1em;
 }
 .card-article{
@@ -260,24 +258,23 @@ body.dark .onActive{
   border: 1px solid transparent !important;
   color: var(--light-theme-text) !important;
 }
-@media (max-width:1074px) {
+
+@media (max-width:910px) {
+  .cards-container{
+    gap: 1.2rem;
+  }
   .card-article{
     flex-grow: 1;
   }
 }
-@media (max-width:739px) {
-  .cards-container{
-    flex-direction: column;
-  }
-  .card-article{
-    width: 100%;
-  }
-}
-@media (max-width:514px){
+@media (max-width:574px){
   nav{
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+  }
+  .card-article{
+    width: 100%;
   }
   .nav-menu li{
     margin-right: 0.5rem;

@@ -1,10 +1,4 @@
 let cardsArr;
-const renderAll = document.getElementsByClassName("nav-item")[0];
-const renderActive = document.getElementsByClassName("nav-item")[1];
-const renderInActive = document.getElementsByClassName("nav-item")[2];
-const ActiveBtnList = document.querySelectorAll(".ActiveBtn");
-const themeToggle = document.querySelector(".theme-toggle");
-const body = document.body;
 try {
     const response = await fetch("/api");
     const data = await response.json();
@@ -13,6 +7,12 @@ try {
 } catch (err) {
     console.log(err);
 }
+const renderAll = document.getElementsByClassName("nav-item")[0];
+const renderActive = document.getElementsByClassName("nav-item")[1];
+const renderInActive = document.getElementsByClassName("nav-item")[2];
+const ActiveBtnList = document.querySelectorAll(".ActiveBtn");
+const themeToggle = document.querySelector(".theme-toggle");
+const body = document.body;
 // console.log(removeBtn)
 
 let isActive = false;
